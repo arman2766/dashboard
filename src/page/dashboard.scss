@@ -1,0 +1,29 @@
+@use '../assets/style/color.scss' as *;
+
+.dashboard-main-container {
+    background-color: $gray;
+    padding: 24px;
+
+    .dashboard-container {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        background-color: $white;
+        border-radius: 24px;
+        padding: 24px;
+        box-shadow: 0 16px 40px 0 #6d8dad14;
+
+        .side-nav-container {
+            width: 20%;
+
+        }
+
+
+
+        .main-container {
+            flex: 1;
+        }
+    }
+
+
+}

@@ -1,34 +1,27 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import React from 'react'
+import { Route, BrowserRouter as Router, Routes, Navigate } from 'react-router-dom'
+import Dashboard from './page/Dashboard'
+import Order from './page/Order'
+import Product from './page/Product'
+import MainLayout from './layout/MainLayout'
+import { Shipping } from './page/Shipping'
+import { NotFound } from './page/NotFound'
 
-function App() {
-  const [count, setCount] = useState(0)
-
+const App = () => {
   return (
-    <>
-      <div>
-        <a href="https://vite.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
+    <Router>
+      <Routes>
+        {/* MainLayout wraps all routes sidebar consistent*/}
+        <Route path="/" element={<MainLayout />}>
+          <Route path="dashboard" element={<Dashboard />} />
+          <Route path="order" element={<Order />} />
+          <Route path="product" element={<Product />} />
+          <Route path="shipping" element={<Shipping />} />
+          <Route path="*" element={<NotFound />} />
+
+        </Route>
+      </Routes>
+    </Router>
   )
 }
 

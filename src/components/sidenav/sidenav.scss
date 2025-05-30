@@ -1,0 +1,44 @@
+@use '../../assets/style/color.scss' as *;
+
+.side-nav-container {
+    ul {
+        display: flex;
+        gap: 16px;
+        flex-direction: column;
+        min-width: max-content;
+
+        li {
+            list-style-type: none;
+
+        }
+
+        .nav-link {
+            text-decoration: none;
+            width: 100%;
+            display: flex;
+            flex-direction: row;
+            justify-content: flex-start;
+            gap: 26px;
+            font-size: 14px;
+            color: $lightGray;
+            padding: 12px 24px;
+            border-radius: 8px;
+            cursor: pointer;
+            border: 1px solid transparent;
+            transition: .5s ease-in-out;
+
+            &:hover {
+                box-shadow: 0 16px 40px 0 #6d8dad14;
+                font-weight: 500;
+            }
+
+            &.active {
+                border: 1px solid #6d8dad14;
+                color: $darkGray;
+                font-weight: 500;
+                box-shadow: 0 16px 40px 0 #6d8dad14;
+            }
+        }
+    }
+
+}
