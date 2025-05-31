@@ -18,12 +18,18 @@
 
         }
 
-
-
         .main-container {
             flex: 1;
         }
+
     }
 
 
+
+}
+
+.stats-container {
+    display: flex;
+    justify-content: space-between;
+    gap: 24px;
 }

@@ -5,6 +5,7 @@ import ProductIcon from '../icons/ProductIcon';
 import OrderIcon from '../icons/OrderIcon';
 import { NavLink } from 'react-router-dom';
 import { colors } from '../../assets/style/colors'
+import CustomButton from '../button/CustomButton';
 const navList = [
     {
         label: 'Dashboard',
@@ -58,6 +59,15 @@ const SideNav = () => {
                     </li>
                 ))}
             </ul>
+            <div className='customer-support'>
+                <h1>Customer Support</h1>
+                <p>Ask you query , place
+                    requests or important
+                    issues. Our support
+                    team will contact 24/7
+                    to you. </p>
+                <CustomButton text='Connect Now' />
+            </div>
         </div>
     )
 }

@@ -1,0 +1,9 @@
+@use '../../assets/style/color.scss' as *;
+
+.shadow-wrapper {
+    width: 100%;
+    height: auto;
+    background: $white;
+    box-shadow: 0 16px 40px 0 #6d8dad14;
+    border-radius: 12px;
+}

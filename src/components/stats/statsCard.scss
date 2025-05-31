@@ -1,0 +1,53 @@
+@use '../../assets/style/color.scss' as *;
+
+.stats-card {
+    background: $lightBlue;
+    width: max-content;
+    min-height: auto;
+    max-height: 218px;
+    border-radius: 24px;
+    padding: 21px 28px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 100%;
+
+    &.primary-stats {
+        background: linear-gradient(180deg, $blue200, $blue400);
+    }
+
+    &.secondary-stats {
+        background: linear-gradient(180deg, $red100, $red200);
+    }
+
+    &.ternary-stats {
+        background: linear-gradient(180deg, $magenta100, $magenta200);
+    }
+
+    h2 {
+        font-size: 18px;
+        font-weight: 600;
+        color: $white;
+    }
+
+    h3 {
+        color: $white;
+        font-size: 60px;
+    }
+
+    .icon-count {
+        display: flex;
+        justify-content: space-between
+    }
+
+    .icon svg {
+        position: relative;
+        left: -26px;
+        top: 36px;
+        transform: rotate(330deg);
+
+        path {
+            fill: rgba($white, 0.13);
+        }
+    }
+}

@@ -7,7 +7,7 @@ import { Outlet } from 'react-router-dom'
 const MainLayout = () => {
     return (
         <div className='app-layout'>
-            <div className='side-nav-container'>
+            <div className='sidebar-nav-container'>
                 <SideNav />
             </div>
             <div className='main-container'>
