@@ -1,5 +1,4 @@
-import React from 'react'
-import { Route, BrowserRouter as Router, Routes } from 'react-router-dom'
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
 import Dashboard from './page/Dashboard'
 import Order from './page/Order'
 import Product from './page/Product'
