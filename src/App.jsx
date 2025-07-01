@@ -1,4 +1,4 @@
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
+import { BrowserRouter as Router, Routes, Route, Navigate } from 'react-router-dom'
 import Dashboard from './page/Dashboard'
 import Order from './page/Order'
 import Product from './page/Product'
@@ -12,6 +12,7 @@ const App = () => {
       <Routes>
         {/* MainLayout wraps all routes sidebar consistent*/}
         <Route path="/" element={<MainLayout />}>
+          <Route index element={<Navigate to="dashboard" replace />} />
           <Route path="dashboard" element={<Dashboard />} />
           <Route path="order" element={<Order />} />
           <Route path="product" element={<Product />} />
